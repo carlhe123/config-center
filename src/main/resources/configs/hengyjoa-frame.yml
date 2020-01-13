@@ -29,6 +29,18 @@ spring:
     userGlobalataSourceStat: true  # 统计所有数据源状态
     connectionProperties: druid.stat.mergSql=true;druid.stat.slowSqlMillis=500  # sql合并统计 设置慢sql时间为500，超过500 会有记录提示
 
+  main:
+    show_banner: false
+  hadoop:
+    fsUri: hdfs://172.16.68.221:9000
+    userName: hadoop
+    rootDir: caifu
+    # 文件缓冲区大小
+    buffer: ${spring.http.multipart.max-file-size}
+
+    # 超时时长，单位：秒
+    timeoutCache: 180
+
 # 配置druid 控制台相关参数
 druid:
   client:

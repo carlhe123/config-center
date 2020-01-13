@@ -52,6 +52,19 @@ spring:
     # 连接超时时间（毫秒）
     timeout: 5000
 
+  main:
+    show_banner: false
+  hadoop:
+    fsUri: hdfs://172.16.68.221:9000
+    userName: hadoop
+    rootDir: caifu
+
+    # 文件缓冲区大小
+    buffer: ${spring.http.multipart.max-file-size}
+
+    # 超时时长，单位：秒
+    timeoutCache: 180
+
 # 配置druid 控制台相关参数
 druid:
   client:
